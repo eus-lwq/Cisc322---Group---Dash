@@ -12,3 +12,8 @@ https://adorable-roast-fcb.notion.site/56b78e851f45418bb1b4cdb0f6442f8b?v=fc4502
 
 Github Repository:
 https://github.com/eus-lwq/Cisc322_Group_Dash
+
+
+File Update:
+
+**Dash1.0-withoutProject.html** A0 Assignment, open it by downloading it and click this HTML file

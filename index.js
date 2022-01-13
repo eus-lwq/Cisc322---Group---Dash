@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const whitelist = ["http://localhost:2000", "http://dash322.herokuapp.com/"];
+const whitelist = ["http://localhost:2000", "http://dash322.herokuapp.com"];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -122,5 +122,5 @@ app.post("/assignmentPDF", upload.single("pdf"), async (req, res, next) => {
 const port = process.env.PORT || 2000;
 
 app.listen(port, () => {
-  console.log("listenning");
+  console.log(`listening on port ${port}`);
 });

@@ -61,7 +61,6 @@ if (process.env.NODE_ENV === "production") {
 //     }
 //   },
 // };
-app.use(cors());
 
 app.get("/test", (req, res) => {
   const test = [

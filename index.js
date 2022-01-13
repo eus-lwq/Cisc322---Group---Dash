@@ -12,6 +12,7 @@ const mongoose = require("mongoose");
 const { storage } = require("./cloudinary/index");
 const upload = multer({ storage });
 const dbUrl = process.env.DB_URL;
+const _CODE = process.env.EV_CODE;
 
 const app = express();
 app.use(express.json());
@@ -58,32 +59,48 @@ app.get("/data", async (req, res) => {
   res.json(assn);
 });
 
-app.get("/send", async (req, res) => {
-  res.redirect(
-    "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf"
-  );
+app.get("/send/:code", async (req, res) => {
+  const { code } = req.params;
+  console.log(code);
+  result = { verified: true };
+  console.log(_CODE);
+  if (code != _CODE) {
+    console.log(code != _CODE);
+    result.verified = false;
+  }
+  res.send(result);
 });
 
 app.post("/assignmentPDF", upload.single("pdf"), async (req, res, next) => {
   console.log("hit!!");
-  const assignment = { ...req.body.assignment };
+
+  const asstemp = { ...req.body.assignment };
+  console.log(asstemp);
+  const assnOb = {
+    title: asstemp.title,
+  };
   if (req.file) {
-    assignment.link = req.file.path;
+    console.log("yes");
+    if (asstemp.fileType === "slide") {
+      assnOb.linkOfSlide = req.file.path;
+    } else if (asstemp.fileType === "report") {
+      assnOb.linkOfReport = req.file.path;
+    }
   }
 
-  console.log(assignment);
+  console.log(assnOb);
 
-  // const assn = await Assignment.findOneAndUpdate(
-  //   {
-  //     title: assignment.title,
-  //     fileType: assignment.fileType,
-  //   },
-  //   { ...assignment }
-  // );
-  // await assn.save();
+  const assn = await Assignment.findOneAndUpdate(
+    {
+      title: assnOb.title,
+    },
+    { ...assnOb }
+  );
+  await assn.save();
 
-  // console.log(assn);
+  console.log(assn);
   res.redirect("http://localhost:3000/");
+  return;
 });
 
 const port = process.env.PORT || 2000;

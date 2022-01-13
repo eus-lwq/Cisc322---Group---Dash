@@ -1,55 +1,80 @@
-import { Component, useEffect, useState } from "react";
-import "./assignment.css";
+import { useEffect, useState } from "react";
+import "../ui/w3.css";
 import AssignmentCard from "../ui/assignmentCard";
+
+const predefinedValue = {
+  assignment1: {
+    content: "asdhiljsahfi hfdsi fhiodsan idsanf ioewnif ndsklf nas",
+    imageLink:
+      "https://images.unsplash.com/photo-1516542076529-1ea3854896f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80",
+  },
+  assignment2: {
+    content:
+      "asdhiljsahfi hfdsi sad sa dsa f fhiodsan idsanf ioewnif ndsklf nas",
+    imageLink:
+      "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+  },
+  assignment3: {
+    content: "asdhiljsahfi hfdsi fhiods fds fdds fsan idsf ",
+    imageLink:
+      "https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80",
+  },
+};
+
+const stringParser = (string) => {
+  return "Assignment " + string.charAt(string.length - 1);
+};
 
 const Assignment = () => {
   const [data, setData] = useState();
   useEffect(async () => {
     await fetch("/data")
-      .then((res) => res.json())
+      .then((res) => {
+        return res.json();
+      })
       .then((assn) => setData([...assn]));
   }, []);
 
-  // data.map((el) => {
-  //   <AssignmentCard
-  //     title={el.title}
-  //     content="Lorem sajkdh lksahdlk sahdl sab dbnkuewbf"
-  //     link={el.link}
-  //   />;
-  // });
   console.log(data);
   if (data) {
+    // let dataList = [];
+    // for (let ob of data) {
+    //   dataList.push(<Assignment title={ob.title} />);
+    // }
+
+    // console.log(dataList);
+
+    let dataList = data.map((el) => {
+      return (
+        <AssignmentCard
+          key={el._id}
+          title={stringParser(el.title)}
+          content={predefinedValue[el.title].content}
+          imageLink={predefinedValue[el.title].imageLink}
+          linkOfSlide={el.linkOfSlide}
+          linkOfReport={el.linkOfReport}
+        />
+      );
+    });
+
+    console.log(dataList);
+
     return (
-      <article className="assn">
-        <AssignmentCard
-          title="Assignment 1"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-        ></AssignmentCard>
-        <AssignmentCard
-          title="Assignment 2"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-        ></AssignmentCard>
-        <AssignmentCard
-          title="Assignment 3"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-        ></AssignmentCard>
-      </article>
+      <div
+        className="w3-container w3-light-grey"
+        style={{ padding: "128px 200px" }}
+        id="project"
+      >
+        {dataList}
+      </div>
     );
   }
   return (
     <article className="assn">
-      <AssignmentCard
-        title="Assignment 1"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-      ></AssignmentCard>
-      <AssignmentCard
-        title="Assignment 2"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-      ></AssignmentCard>
-      <AssignmentCard
-        title="Assignment 3"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita temporibus reprehenderit maiores tempore, quisquam blanditiis, corrupti quae adipisci quidem perspiciatis, ab facilis et. Excepturi rem ipsa enim non officiis."
-      ></AssignmentCard>
+      <p>
+        No_Data_Exception: No data found, if the problem presists, contact me
+        @Lu
+      </p>
     </article>
   );
 };

@@ -20,38 +20,23 @@ mongoose
 const assignment = [
   {
     title: "assignment1",
-    fileType: "slide",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
-  },
-
-  {
-    title: "assignment1",
-    fileType: "report",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
+    linkOfReport: "",
+    linkOfSlide:
+      "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
   },
 
   {
     title: "assignment2",
-    fileType: "slide",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
-  },
-
-  {
-    title: "assignment2",
-    fileType: "report",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
+    linkOfReport:
+      "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
+    linkOfSlide: "",
   },
 
   {
     title: "assignment3",
-    fileType: "slide",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
-  },
-
-  {
-    title: "assignment3",
-    fileType: "report",
-    link: "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
+    linkOfReport: "",
+    linkOfSlide:
+      "https://res.cloudinary.com/luchen/image/upload/v1642012049/groupSixAssn/twjyakkfibpybm3n6vsj.pdf",
   },
 ];
 

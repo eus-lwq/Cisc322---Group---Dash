@@ -43,7 +43,11 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const whitelist = ["http://localhost:2000", "http://dash322.herokuapp.com"];
+const whitelist = [
+  "http://localhost:2000",
+  "http://localhost:3000",
+  "http://dash322.herokuapp.com",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {

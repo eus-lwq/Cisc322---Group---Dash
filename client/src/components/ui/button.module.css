@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  color: red;
+  padding: 2%;
+  font-size: 18px;
+  opacity: 0.6;
+  border: none;
+}
+
+.WordContent {
+  position: relative;
+  color: black;
+}
+.WordContent ::before {
+  position: absolute;
+  content: "\f00a";
+}
+.button div {
+  text-align: center;
+}
+
+.button:hover {
+  opacity: 1;
+}

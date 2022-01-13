@@ -1,0 +1,19 @@
+.About-section {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  align-items: center;
+
+  background-color: aqua;
+}
+
+.About-section > h1 {
+  padding-top: 5%;
+  color: black;
+}
+
+.About-section > p {
+  width: 60%;
+  background-color: brown;
+  margin-bottom: 5%;
+}

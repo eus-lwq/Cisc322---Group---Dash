@@ -1,0 +1,7 @@
+.headerh1 {
+  color: white;
+}
+
+.headerh1 + h4 {
+  color: aliceblue;
+}

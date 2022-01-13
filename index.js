@@ -119,7 +119,7 @@ app.post("/assignmentPDF", upload.single("pdf"), async (req, res, next) => {
   await assn.save();
 
   console.log(assn);
-  res.redirect("http://localhost:3000/");
+  res.redirect("/");
   return;
 });
 

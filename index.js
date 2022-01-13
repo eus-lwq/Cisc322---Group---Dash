@@ -7,6 +7,7 @@ const multer = require("multer");
 const methodOverride = require("method-override");
 const Assignment = require("./models/assignment");
 const cors = require("cors");
+const path = require("path");
 const mongoose = require("mongoose");
 const { storage } = require("./cloudinary/index");
 const upload = multer({ storage });
@@ -85,6 +86,8 @@ app.post("/assignmentPDF", upload.single("pdf"), async (req, res, next) => {
   res.redirect("http://localhost:3000/");
 });
 
-app.listen("2000", () => {
+const port = process.env.PORT || 2000;
+
+app.listen(port, () => {
   console.log("listenning");
 });

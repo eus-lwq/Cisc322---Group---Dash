@@ -8,19 +8,26 @@ const Assignment = (props) => {
 
   if (verify) {
     return (
-      <form action="/assignmentPDF" method="POST" encType="multipart/form-data">
-        <select name="assignment[title]">
-          <option value="assignment1">Assignment1</option>
-          <option value="assignment2">Assignment2</option>
-          <option value="assignment3">Assignment3</option>
-        </select>
-        <select name="assignment[fileType]">
-          <option value="slide">Slide</option>
-          <option value="report">Report</option>
-        </select>
-        <input type="file" name="pdf" />
-        <button>Sumit your change</button>
-      </form>
+      <div className="assn-submit">
+        <h2>Check each selection carfully!!</h2>
+        <form
+          action="/assignmentPDF"
+          method="POST"
+          encType="multipart/form-data"
+        >
+          <select name="assignment[title]">
+            <option value="assignment1">Assignment1</option>
+            <option value="assignment2">Assignment2</option>
+            <option value="assignment3">Assignment3</option>
+          </select>
+          <select name="assignment[fileType]">
+            <option value="slide">Slide</option>
+            <option value="report">Report</option>
+          </select>
+          <input type="file" name="pdf" />
+          <button>Sumit your change</button>
+        </form>
+      </div>
     );
   }
 

@@ -1,0 +1,14 @@
+.assn-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+  height: 20vh;
+}
+
+.assn-submit form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

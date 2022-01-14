@@ -1619,3 +1619,37 @@ a {
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
 }
+
+.fa {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ff:before {
+  /* content: url("../../../svgs/212945_f00b_icon.svg"); */
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  content: "";
+  display: block;
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+}
+
+.fa-th:before {
+  /* content: url("../../../svgs/212945_f00b_icon.svg"); */
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  content: "";
+  display: block;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+}

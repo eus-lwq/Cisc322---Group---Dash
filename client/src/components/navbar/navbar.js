@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import "../ui/w3.css";
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <Fragment>
       <div className="w3-top">

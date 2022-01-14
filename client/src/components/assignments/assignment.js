@@ -62,9 +62,15 @@ const Assignment = () => {
     return (
       <div
         className="w3-container w3-light-grey"
-        style={{ padding: "128px 200px" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         id="project"
       >
+        <h1 style={{ padding: "4% 0" }}>Our Assignments</h1>
         {dataList}
       </div>
     );

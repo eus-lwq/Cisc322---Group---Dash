@@ -15,7 +15,6 @@ function App() {
       <About></About>
       <Assignment></Assignment>
       <div>
-        <h2>Let's get started!</h2>
         <AssignmentSubmit></AssignmentSubmit>
       </div>
       <Team></Team>

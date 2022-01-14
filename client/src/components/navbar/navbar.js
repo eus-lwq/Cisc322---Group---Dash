@@ -15,7 +15,7 @@ const Navbar = (props) => {
               ABOUT
             </a>
             <a href="#project" className="w3-bar-item w3-button">
-              <i className="fa fa-th"></i> PROJECT
+              <i className="fa ff"></i> PROJECT
             </a>
             <a href="#team" className="w3-bar-item w3-button">
               <i className="fa fa-user"></i> TEAM

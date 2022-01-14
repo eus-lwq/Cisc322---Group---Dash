@@ -1,5 +1,4 @@
 import Header from "./header";
-import Button from "../ui/button";
 import "../ui/w3.css";
 
 const HeaderContent = () => {

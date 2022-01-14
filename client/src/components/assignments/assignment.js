@@ -37,13 +37,6 @@ const Assignment = () => {
 
   console.log(data);
   if (data) {
-    // let dataList = [];
-    // for (let ob of data) {
-    //   dataList.push(<Assignment title={ob.title} />);
-    // }
-
-    // console.log(dataList);
-
     let dataList = data.map((el) => {
       return (
         <AssignmentCard

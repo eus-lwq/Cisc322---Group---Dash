@@ -20,7 +20,7 @@ const assignmentCard = (props) => {
         </div>
         <div className="w3-col m6">
           <h3 style={{ color: "black" }}>{props.title}:</h3>
-          <p>{props.content}</p>
+          <p style={{ paddingRight: "45%" }}>{props.content}</p>
           <p>
             <a
               href={props.linkOfSlide}

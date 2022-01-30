@@ -25,7 +25,7 @@ const Assignment = (props) => {
             <option value="report">Report</option>
           </select>
           <input type="file" name="pdf" />
-          <button>Sumit your change</button>
+          <button>Submit your change</button>
         </form>
       </div>
     );

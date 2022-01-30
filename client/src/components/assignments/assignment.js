@@ -4,18 +4,20 @@ import AssignmentCard from "../ui/assignmentCard";
 
 const predefinedValue = {
   assignment1: {
-    content: "asdhiljsahfi hfdsi fhiodsan idsanf ioewnif ndsklf nas",
+    content:
+      "In this assignment, we will dive into this software's documents to find out the conceptual architecture holding multiple parts of components, where these components interact with each other to present the functionality. Moreover, we will dig out the rationale of this architecture that plays behind the scenes from different views and perspectives and further extrapolate its evolution. ",
     imageLink:
       "https://images.unsplash.com/photo-1516542076529-1ea3854896f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80",
   },
   assignment2: {
     content:
-      "asdhiljsahfi hfdsi sad sa dsa f fhiodsan idsanf ioewnif ndsklf nas",
+      "In this assignment, we will delve into the software's code and find out the rudimental logic in the actual implementation, then we summarize it as concrete architecture and place it side by side with conceptual architecture from A1 to compare the differences in between. ",
     imageLink:
       "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
   },
   assignment3: {
-    content: "asdhiljsahfi hfdsi fhiods fds fdds fsan idsf ",
+    content:
+      "Finally, in this assignment, we will propose possible enhancements and potential new features that we can add on. And then, we extrapolate any possible change to the current code, like interface, class, and dependency. ",
     imageLink:
       "https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80",
   },

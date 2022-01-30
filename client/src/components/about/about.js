@@ -25,15 +25,14 @@ const About = () => {
         >
           ApolloAuto
         </a>{" "}
-        is a high-performance, flexible architecture which accelerates the
-        development, testing, and deployment of Autonomous Vehicles, while also
-        paving the way for people to understand self-driving and rapidly build
-        their own complete autonomous driving systems. Apollo's key components
-        are high precision maps, accurate to the centimeter level localization,
-        neural network perception, predictive mobility, and planning as well as
-        control. In this course, we will take a closer examination of how
-        exactly this software is working and how it coordinates various
-        components to collaborate.
+        is a massive software for developing autonomous driving, it has powerful
+        perfomance, and high modification ability. It allows user efficently
+        develop their own autonomous driving software based on it. Inside this
+        software, it contains high precision maps, accurate to the centimeter
+        level localization, neural network perception, predictive mobility, and
+        planning as well as control. In this course, we will take a closer
+        examination of how exactly this software is working and how it
+        coordinates various components to collaborate.
       </p>
 
       <a
@@ -58,11 +57,6 @@ const About = () => {
           Data Driven Prediction Architecture for Autonomous Driving and its
           Application on Apollo Platform
         </a>
-        : In this paper, authors introduce a highly automated learning-based
-        prediction model pipeline, which has been deployed on Baidu Apollo
-        self-driving platform, to support different prediction learning
-        sub-modules' data annotation, feature extraction, model training/tuning
-        and deployment.
       </p>
       <p style={{ padding: "0 25%" }}>
         <a
@@ -72,13 +66,6 @@ const About = () => {
           Enabling Unit Testing of Already-Integrated AI Software Systems: The
           Case of Apollo for Autonomous Driving
         </a>
-        : Deploying those already-integrated software frameworks makes unit
-        testing, a fundamental step in the validation process of critical
-        software, very challenging in safety-critical systems. To tackle this
-        issue, this paper shows the steps we followed to develop standalone
-        versions of the modules in an industry-level autonomous driving
-        framework (Apollo) by applying several modifications to its
-        architectural design.
       </p>
       <p style={{ padding: "0 25%" }}>
         <a
@@ -87,8 +74,6 @@ const About = () => {
         >
           A functional reference architecture for autonomous driving
         </a>
-        : introduction and reference architecture for the domain of autonomous
-        driving.
       </p>
       <p style={{ padding: "0 25%" }}>
         <a
@@ -98,11 +83,6 @@ const About = () => {
           Drift with Devil: Security of Multi-Sensor Fusion based Localization
           in High-Level Autonomous Driving under GPS Spoofing
         </a>
-        : Authors design FusionRipper, a novel and general attack that
-        opportunistically captures and exploits take-over vulnerabilities. They
-        evaluate it on 6 real-world sensor traces, and find that FusionRipper
-        can achieve at least 97% and 91.3% success rates in all traces for
-        off-road and wrong-way attacks respectively.
       </p>
       <p style={{ padding: "0 25%" }}>
         <a
@@ -111,7 +91,6 @@ const About = () => {
         >
           Software System of Autonomous Vehicles: Architecture, Network and OS
         </a>
-        : an undergraduate thesis covers the hardware side of things.
       </p>
       <p className="w3-center w3-large">Links</p>
       <p style={{ padding: "0 25%" }}>
@@ -121,9 +100,6 @@ const About = () => {
         >
           Road test video
         </a>
-        : In this road test, Apollo staffs put Apollo autonomous vehicle through
-        a series of complex and unexpected road scenarios that would make many
-        human drivers anxious and it handles them effortlessly.
       </p>
       <p style={{ padding: "0 25%" }}>
         <a
@@ -132,9 +108,34 @@ const About = () => {
         >
           What is Baidu's Apollo? Why Autonomous Driving Cars?
         </a>
-        : In this road test, Apollo staffs put Apollo autonomous vehicle through
-        a series of complex and unexpected road scenarios that would make many
-        human drivers anxious and it handles them effortlessly.
+      </p>
+      <p className="w3-center w3-large">References</p>
+      <p style={{ padding: "0 25%" }}>
+        Xu, Xiao, X., Miao, J., & Luo, Q. (2020). Data Driven Prediction
+        Architecture for Autonomous Driving and its Application on Apollo
+        Platform.
+      </p>
+      <p style={{ padding: "0 25%" }}>
+        M. Alcon, H. Tabani, J. Abella and F. J. Cazorla, "Enabling Unit Testing
+        of Already-Integrated AI Software Systems: The Case of Apollo for
+        Autonomous Driving," 2021 24th Euromicro Conference on Digital System
+        Design (DSD), 2021, pp. 426-433, doi: 10.1109/DSD53832.2021.00071.
+      </p>
+      <p style={{ padding: "0 25%" }}>
+        Behere, & Törngren, M. (2016). A functional reference architecture for
+        autonomous driving. Information and Software Technology, 73(C), 136–150.
+        https://doi.org/10.1016/j.infsof.2015.12.008
+      </p>
+      <p style={{ padding: "0 25%" }}>
+        Shen, Won, J. Y., Chen, Z., & Chen, Q. A. (2020). Drift with Devil:
+        Security of Multi-Sensor Fusion based Localization in High-Level
+        Autonomous Driving under GPS Spoofing (Extended Version).
+      </p>
+      <p style={{ padding: "0 25%" }}>
+        Gordon. (2021). Autonomous Vehicle Interaction Control Software and
+        Smart Sustainable Urban Mobility Behaviors in Network Connectivity
+        Systems. Contemporary Readings in Law and Social Justice, 13(1), 40–49.
+        https://doi.org/10.22381/CRLSJ13120214
       </p>
     </div>
   );
